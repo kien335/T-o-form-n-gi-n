@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form đơn giản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            margin-top: 0;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            background-color: #ff6600;
+        }
+
+        .registration h2 {
+            background-color: #1976d2;
+        }
+
+        .row {
+            margin-bottom: 15px;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 6px;
+            color: #174b85;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            font: inherit;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+
+        .hobbies {
+            color: #d35400;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần 1: Form sở thích -->
+    <form action="index.html" method="get">
+        <h2>SỞ THÍCH CỦA BẠN</h2>
+
+        <div class="row">
+            <label class="field-label" for="yourname">Họ và tên</label>
+            <input type="text" id="yourname" name="yourname">
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="personal-email">Email</label>
+            <input type="text" id="personal-email" name="email">
+        </div>
+
+        <div class="row">
+            <span class="field-label">Sở thích</span>
+            <div class="options hobbies">
+                <label><input type="checkbox" name="hobby" value="sports"> Thể thao</label>
+                <label><input type="checkbox" name="hobby" value="music"> Âm nhạc</label>
+                <label><input type="checkbox" name="hobby" value="reading"> Đọc sách</label>
+                <label><input type="checkbox" name="hobby" value="web"> Lướt web</label>
+                <label><input type="checkbox" name="hobby" value="gaming"> Chơi game</label>
+                <label><input type="checkbox" name="hobby" value="cinema"> Điện ảnh</label>
+                <label><input type="checkbox" name="hobby" value="travel"> Du lịch</label>
+            </div>
+        </div>
+
+        <button type="submit">Gửi thông tin</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+
+    <!-- Phần 2: Form đăng ký học viên -->
+    <form action="index.html" method="get" class="registration">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+
+        <div class="row">
+            <label class="field-label" for="fullname">Họ và tên</label>
+            <input type="text" id="fullname" name="fullname">
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="student-email">Email</label>
+            <input type="email" id="student-email" name="email">
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="phone">Số điện thoại</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="birthday">Ngày sinh</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+
+        <div class="row">
+            <span class="field-label">Giới tính</span>
+            <div class="options">
+                <label><input type="radio" name="gender" value="male"> Nam</label>
+                <label><input type="radio" name="gender" value="female"> Nữ</label>
+                <label><input type="radio" name="gender" value="other"> Khác</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="address">Địa chỉ</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="course">Khóa học</label>
+            <select id="course" name="course">
+                <option value="html-css">HTML &amp; CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <span class="field-label">Hình thức học</span>
+            <div class="options">
+                <label><input type="radio" name="study_type" value="online"> Online</label>
+                <label><input type="radio" name="study_type" value="offline"> Offline</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <span class="field-label">Sở thích</span>
+            <div class="options">
+                <label><input type="checkbox" name="hobby" value="reading"> Đọc sách</label>
+                <label><input type="checkbox" name="hobby" value="music"> Nghe nhạc</label>
+                <label><input type="checkbox" name="hobby" value="sports"> Thể thao</label>
+                <label><input type="checkbox" name="hobby" value="coding"> Lập trình</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="field-label" for="note">Ghi chú</label>
+            <textarea id="note" name="note" rows="3"></textarea>
+        </div>
+
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+    </form>
+</body>
+</html>
